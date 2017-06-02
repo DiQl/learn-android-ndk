@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Example of a call to a native method
         TextView tv = (TextView) findViewById(R.id.sample_text);
-        tv.setText(transString("123456"));
+        tv.setText(booleanStrJNI(true));
     }
 
     /**
@@ -30,4 +30,8 @@ public class MainActivity extends AppCompatActivity {
     public native String lalalaJNI();
 
     public native String transString(String str);
+
+    public native int booleanJNI(boolean test);
+
+    public native String booleanStrJNI(boolean test);
 }
